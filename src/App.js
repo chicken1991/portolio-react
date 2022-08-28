@@ -1,16 +1,16 @@
-import Nav from './components/Nav';
+import Navegation from './components/Navegation';
+import Home from './components/Home';
 
 import logo from './logo.svg';
 import './App.css';
+// import './assets/img'
 
 function App() {
   return (
    
     <div className="App">
-      
-       <Nav />
 
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -23,7 +23,10 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+
+      <Navegation/>
+      <Home/>
     </div>
   );
 }
