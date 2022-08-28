@@ -7,6 +7,14 @@ export default function About() {
 
 
     return (
+        <div>
+        
+        <header class="masthead">
+                <div class="container">
+                    <div class="masthead-subheading">Welcome!</div>
+                </div>
+            </header>
+
         <section class="page-section" id="about">
         <div class="container">
             <div class="text-center">
@@ -70,6 +78,7 @@ export default function About() {
             </ul>
         </div>
     </section>
+    </div>
     )
 
 }

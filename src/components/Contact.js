@@ -5,6 +5,12 @@ export default function Contact() {
 
 
     return (
+        <div>
+            <header class="masthead">
+                <div class="container">
+                    <div class="masthead-subheading">Welcome!</div>
+                </div>
+            </header>
         <section class="page-section bg-light" id="contact">
         <div class="container">
             <div class="text-center">
@@ -35,6 +41,7 @@ export default function Contact() {
             </div>
         </div>
     </section>
+    </div>
     )
 
 }

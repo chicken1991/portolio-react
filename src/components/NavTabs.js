@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Nav from 'react-bootstrap/Nav'
 import brandImage from '../assets/img/benPitroff3.svg';
 import NavDropdown from 'react-bootstrap/NavDropdown'; //possibly use this for the collapsed menu
@@ -12,14 +12,34 @@ function NavTabs({ currentPage, handlePageChange }) {
     setNavbarOpen(prev => !prev)
   }
 
+  //Scrolly navbar stuff
+  const [scrolled, setScrolled] = useState(false);
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 1) {
+      setScrolled(true);
+    }
+    else {
+      setScrolled(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+  })
+  let navbarClasses = ['navbar', 'navbarExpandLg', 'navbarDark', 'fixed-top'];
+  if (scrolled) {
+    navbarClasses.push('navbar-shrink');
+  }
+
 
   return (
-    <Nav className="navbar navbarExpandLg navbarDark fixed-top" id="mainNav">
+    <Nav className={navbarClasses.join(" ")} id="mainNav">
       <div className="container">
         <a className="navbarBrand" href="#home"><img src={brandImage} alt="img not alt - why???" /></a>
         <div onClick={handleToggle} className="navbarToggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-responsive"
           aria-controls="navbar-responsive" aria-expanded="false" aria-label="Toggle navigation">
-            {navbarOpen ? "Close" : "Menu"}
+          {navbarOpen ? "Close" : "Menu"}
           <i className="fas fa-bars ms-1"></i>
         </div>
         <div className={`menuNav ${navbarOpen ? "navbarCollapse collapse show" : ".navbarToggler navbarCollapse collapse"}`} id="navbarResponsive">
