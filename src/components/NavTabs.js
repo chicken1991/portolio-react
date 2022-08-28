@@ -1,20 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Nav from 'react-bootstrap/Nav'
 import brandImage from '../assets/img/benPitroff3.svg';
 import NavDropdown from 'react-bootstrap/NavDropdown'; //possibly use this for the collapsed menu
 
-
 function NavTabs({ currentPage, handlePageChange }) {
+
+  //Hamburger stuff for react
+  const [navbarOpen, setNavbarOpen] = useState(false)
+
+  const handleToggle = () => {
+    setNavbarOpen(prev => !prev)
+  }
+
+
   return (
     <Nav className="navbar navbarExpandLg navbarDark fixed-top" id="mainNav">
       <div className="container">
         <a className="navbarBrand" href="#home"><img src={brandImage} alt="img not alt - why???" /></a>
-        <div className="navbarToggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-responsive"
+        <div onClick={handleToggle} className="navbarToggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-responsive"
           aria-controls="navbar-responsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i className="fas faBars ms1"></i>
+            {navbarOpen ? "Close" : "Menu"}
+          <i className="fas fa-bars ms-1"></i>
         </div>
-        <div className="collapse navbarCollapse" id="navbarResponsive">
+        <div className={`menuNav ${navbarOpen ? "navbarCollapse collapse show" : ".navbarToggler navbarCollapse collapse"}`} id="navbarResponsive">
           <ul className="navbarNav textUppercase msAuto py4 pyLg0">
             <li className="navItem">
               <a

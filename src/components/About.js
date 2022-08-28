@@ -3,7 +3,7 @@ import img1 from '../assets/img/about/1.jpeg';
 import img2 from '../assets/img/about/2.jpeg';
 import img3 from '../assets/img/about/3.jpg';
 
-export default function Home() {
+export default function About() {
 
 
     return (
