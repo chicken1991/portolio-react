@@ -1,34 +1,22 @@
 import Navegation from './components/Navegation';
 import Home from './components/Home';
+import PortfolioContainer from "./components/PortfolioContainer";
 
-import logo from './logo.svg';
 import './App.css';
-// import './assets/img'
 
-function App() {
-  return (
+// function App() {
+//   return (
    
-    <div className="App">
+//     <div className="App">
 
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+//       <Navegation/>
+//       <Home/>
+//     </div>
+//   );
+// }
 
-      <Navegation/>
-      <Home/>
-    </div>
-  );
-}
+
+
+const App = () => <PortfolioContainer />;
 
 export default App;

@@ -3947,6 +3947,8 @@ textarea.form-control-lg {
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
+
+
 @media (prefers-reduced-motion: reduce) {
   .navLink {
     transition: none;
@@ -4037,6 +4039,7 @@ textarea.form-control-lg {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+
 .navbar > .container,
 .navbar > .container-fluid,
 .navbar > .container-sm,
@@ -11367,7 +11370,7 @@ p {
   letter-spacing: 0.0625em;
 }
 #mainNav .navbarNav .navItem .navLink.active, #mainNav .navbarNav .navItem .navLink:hover {
-  color: #664084;
+  color: #0dcaf0;
 }
 
 @media (min-width: 992px) {
