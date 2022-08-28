@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Home() {
 
-   
+
     return (
         <div>
             <header class="masthead">
@@ -11,6 +11,6 @@ export default function Home() {
                 </div>
             </header>
         </div>
-                )
-                
+    )
+
 }

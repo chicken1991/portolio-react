@@ -1,13 +1,11 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav'
 import brandImage from '../assets/img/benPitroff3.svg';
+import NavDropdown from 'react-bootstrap/NavDropdown'; //possibly use this for the collapsed menu
 
 
-// Here we are using object destructuring assignment to pluck off our variables from the props object
-// We assign them to their own variable names
 function NavTabs({ currentPage, handlePageChange }) {
   return (
-
     <Nav className="navbar navbarExpandLg navbarDark fixed-top" id="mainNav">
       <div className="container">
         <a className="navbarBrand" href="#home"><img src={brandImage} alt="img not alt - why???" /></a>
@@ -17,8 +15,6 @@ function NavTabs({ currentPage, handlePageChange }) {
           <i className="fas faBars ms1"></i>
         </div>
         <div className="collapse navbarCollapse" id="navbarResponsive">
-
-
           <ul className="navbarNav textUppercase msAuto py4 pyLg0">
             <li className="navItem">
               <a
