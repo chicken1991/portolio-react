@@ -8,14 +8,14 @@ export default function Contact() {
         <div>
             <header class="masthead">
                 <div class="container">
-                    <div class="masthead-subheading">Welcome!</div>
+                    <div class="masthead-subheading">CONTACT</div>
                 </div>
             </header>
         <section class="page-section bg-light" id="contact">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">This is Me</h2>
-                <h3 class="section-subheading text-muted">Nice to meet you</h3>
+                <h2 class="section-heading text-uppercase">Please reach out!</h2>
+                <h3 class="section-subheading text-muted">It'll be nice to meet you</h3>
             </div>
             <div class="row">
                 <div class="col-lg-12">
@@ -36,7 +36,7 @@ export default function Contact() {
             </div>
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <p class="large text-muted">Feel free to reach out - why else would I have contact info on here?</p>
+                    <p class="large text-muted">I would love to connect</p>
                 </div>
             </div>
         </div>

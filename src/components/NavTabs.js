@@ -10,6 +10,7 @@ function NavTabs({ currentPage, handlePageChange }) {
 
   const handleToggle = () => {
     setNavbarOpen(prev => !prev)
+    // figure out how to close navbar once "new page" is loaded, or clicked.
   }
 
   //Scrolly navbar stuff

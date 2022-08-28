@@ -11,14 +11,14 @@ export default function About() {
         
         <header class="masthead">
                 <div class="container">
-                    <div class="masthead-subheading">Welcome!</div>
+                    <div class="masthead-subheading">About</div>
                 </div>
             </header>
 
         <section class="page-section" id="about">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">About</h2>
+                <h2 class="section-heading text-uppercase">This is me</h2>
                 <h3 class="section-subheading text-muted">A little about myself</h3>
             </div>
             <ul class="timeline">
