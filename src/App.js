@@ -1,5 +1,3 @@
-import Navegation from './components/Navegation';
-import Home from './components/Home';
 import PortfolioContainer from "./components/PortfolioContainer";
 
 import './App.css';

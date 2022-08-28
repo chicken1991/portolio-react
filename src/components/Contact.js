@@ -8,7 +8,7 @@ export default function Contact() {
         <div>
             <header class="masthead">
                 <div class="container">
-                    <div class="masthead-subheading">CONTACT</div>
+                    <div class="masthead-subheading">Contact</div>
                 </div>
             </header>
         <section class="page-section bg-light" id="contact">
