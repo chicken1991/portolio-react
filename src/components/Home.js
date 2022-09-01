@@ -5,9 +5,9 @@ export default function Home() {
 
     return (
         <div>
-            <header class="masthead">
-                <div class="container">
-                    <div class="masthead-subheading">Welcome!</div>
+            <header className="masthead">
+                <div className="container">
+                    <div className="masthead-subheading">Welcome!</div>
                 </div>
             </header>
         </div>

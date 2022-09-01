@@ -9,63 +9,63 @@ export default function About() {
     return (
         <div>
         
-        <header class="masthead">
-                <div class="container">
-                    <div class="masthead-subheading">About</div>
+        <header className="masthead">
+                <div className="container">
+                    <div className="masthead-subheading">About</div>
                 </div>
             </header>
 
-        <section class="page-section" id="about">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">This is me</h2>
-                <h3 class="section-subheading text-muted">A little about myself</h3>
+        <section className="page-section" id="about">
+        <div className="container">
+            <div className="text-center">
+                <h2 className="section-heading text-uppercase">This is me</h2>
+                <h3 className="section-subheading text-muted">A little about myself</h3>
             </div>
-            <ul class="timeline">
+            <ul className="timeline">
                 <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src={img1}
+                    <div className="timeline-image"><img className="rounded-circle img-fluid" src={img1}
                             alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
+                    <div className="timeline-panel">
+                        <div className="timeline-heading">
                             <h4>November 2010</h4>
-                            <h4 class="subheading">6 Feet Down</h4>
+                            <h4 className="subheading">6 Feet Down</h4>
                         </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">I started my career in an unusual spot - in the ground! I was getting
+                        <div className="timeline-body">
+                            <p className="text-muted">I started my career in an unusual spot - in the ground! I was getting
                                 married soon, so I needed a job that pays the bills. That job? Grave digger.</p>
                         </div>
                     </div>
                 </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src={img2}
+                <li className="timeline-inverted">
+                    <div className="timeline-image"><img className="rounded-circle img-fluid" src={img2}
                             alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
+                    <div className="timeline-panel">
+                        <div className="timeline-heading">
                             <h4>September 2014</h4>
-                            <h4 class="subheading">Hello Tech World!</h4>
+                            <h4 className="subheading">Hello Tech World!</h4>
                         </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">I was miraculously hired into a Data Center Technician position - my
+                        <div className="timeline-body">
+                            <p className="text-muted">I was miraculously hired into a Data Center Technician position - my
                                 experience? Building gaming PCs.</p>
                         </div>
                     </div>
                 </li>
-                <li class="timeline-image">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src={img3}
+                <li className="timeline-image">
+                    <div className="timeline-image"><img className="rounded-circle img-fluid" src={img3}
                             alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
+                    <div className="timeline-panel">
+                        <div className="timeline-heading">
                             <h4>April 2022</h4>
-                            <h4 class="subheading">Diving into Dev</h4>
+                            <h4 className="subheading">Diving into Dev</h4>
                         </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">My persuits are leading me toward software and site reliability. So I
+                        <div className="timeline-body">
+                            <p className="text-muted">My persuits are leading me toward software and site reliability. So I
                                 am currently enrolled in a coding bootcamp - which is why you see this page now!</p>
                         </div>
                     </div>
                 </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-image">
+                <li className="timeline-inverted">
+                    <div className="timeline-image">
                         <h4>
                             Meet
                             <br />
