@@ -78,10 +78,10 @@ export default function Portfolio() {
                     </div>
                 </div>
             </section>
-            <Modal className="portfolio-modal modal fade" tabIndex="-1" role="dialog" show={modalIsOpen} onHide= {() => setModalIsOpen(false)}>
-                <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="close-modal" data-bs-dismiss="modal"><img src={closeIcon}
+            <Modal className="portfolioModal modal fade" tabIndex="-1" role="dialog" show={modalIsOpen} onHide= {() => setModalIsOpen(false)}>
+                <div className="modalDialog">
+                    <div className="modalContent">
+                        <div className="closeModal" data-bs-dismiss="modal"><img src={closeIcon}
                             alt="Close modal" onClick = {() => setModalIsOpen(false)} />
                         </div>
 
@@ -89,9 +89,9 @@ export default function Portfolio() {
                             <div className="row justify-content-center">
                                 <div className="col-lg-8">
 
-                                    <div className="modal-body">
-                                        <h2 className="text-uppercase">{modalData.name}</h2>
-                                        <p className="item-intro text-muted">
+                                    <div className="modalBody">
+                                        <h2 className="textUppercase">{modalData.name}</h2>
+                                        <p className="itemIntro textMuted">
                                             <a target="_blank" href={modalData.live}>Click
                                                 here for the live demo</a>
                                             <span> : </span>
@@ -101,7 +101,7 @@ export default function Portfolio() {
                                         <img className="img-fluid d-block mx-auto" src={modalData.image}
                                             alt="weather-dashboard-img" />
                                         <p>{modalData.desc}</p>
-                                        <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                        <button className="btn btnPrimary btnXl textUppercase" 
                                             type="button" onClick = {() => setModalIsOpen(false)}>
                                             <i className="fas fa-xmark me-1"></i>
                                             Close
