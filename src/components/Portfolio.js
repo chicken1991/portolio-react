@@ -6,15 +6,29 @@ import Projects from '../Projects';
 
 import closeIcon from '../assets/img/close-icon.svg'
 
+// YUCK this is yucky and it is gross. But it works I guess...
+const blankModalData = 
+    {
+        id: '',
+        name: '',
+        repo: '',
+        live: '',
+        image:'',
+        desc:'',
+        short:''
+    }
 
 
 export default function Portfolio() {
 
-    const [show, setShow] = useState(false);
-    
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    
+    // const [show, setShow] = useState(false);
+
+    // const handleClose = () => setShow(false);
+    // const handleShow = () => setShow(true);
+
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [modalData, setModalData] = useState(blankModalData);
+
 
     return (
         <div>
@@ -37,9 +51,15 @@ export default function Portfolio() {
                         {/* This is where I attempt to map the projects array/objects */}
 
                         {Projects.map((project) => (
-                        <div className="col-lg-4 col-sm-6 mb-4 mb-lg-0" key={project.id}>
+                            <div className="col-lg-4 col-sm-6 mb-4 mb-lg-0" key={project.id}>
                                 <div className="portfolio-item">
-                                    <a className="portfolio-link" data-bs-toggle="modal" onClick={handleShow}>
+                                    <a className="portfolio-link" 
+                                        data-bs-toggle="modal" 
+                                        onClick = {() => {
+                                            setModalData(project);
+                                            setModalIsOpen(true);
+                                        }}
+                                            >
                                         <div className="portfolio-hover">
                                             <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x"></i></div>
                                         </div>
@@ -51,87 +71,49 @@ export default function Portfolio() {
                                         <div className="portfolio-caption-subheading text-muted">{project.short}</div>
                                     </div>
 
-                                    <Modal className="portfolio-modal modal fade" key={project.id} tabIndex="-1" role="dialog" show={show} onHide={handleShow}>
-                                        <div className="modal-dialog">
-                                            <div className="modal-content">
-
-                                                <div className="close-modal" data-bs-dismiss="modal"><img src={closeIcon}
-                                                    alt="Close modal" onClick={handleClose} /></div>
-
-                                                <div className="container">
-                                                    <div className="row justify-content-center">
-                                                        <div className="col-lg-8">
-
-                                                            <div className="modal-body">
-                                                                <h2 className="text-uppercase">{project.name}</h2>
-                                                                <p className="item-intro text-muted">
-                                                                    <a target="_blank" href={project.live}>Click
-                                                                        here for the live demo</a>
-                                                                    <span> : </span>
-                                                                    <a target="_blank" href={project.repo}>Click
-                                                                        here for the repo</a>
-                                                                </p>
-                                                                <img className="img-fluid d-block mx-auto" src={project.image}
-                                                                    alt="weather-dashboard-img" />
-                                                                <p>{project.desc}</p>
-                                                                <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
-                                                                    type="button" onClick={handleClose}>
-                                                                    <i className="fas fa-xmark me-1"></i>
-                                                                    Close
-                                                                </button>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Modal>
+                                    
                                 </div>
-                        </div>
+                            </div>
                         ))}
                     </div>
                 </div>
             </section>
-
-            {/* MODALS!!!! */}
-            {/* {Projects.map((project) => (
-            <div className="portfolio-modal modal fade" id={project.id} tabIndex="-1" role="dialog" aria-hidden="true">
+            <Modal className="portfolio-modal modal fade" tabIndex="-1" role="dialog" show={modalIsOpen} onHide= {() => setModalIsOpen(false)}>
                 <div className="modal-dialog">
                     <div className="modal-content">
-                        <div className="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
-                            alt="Close modal" /></div>
+                        <div className="close-modal" data-bs-dismiss="modal"><img src={closeIcon}
+                            alt="Close modal" onClick = {() => setModalIsOpen(false)} />
+                        </div>
+
                         <div className="container">
                             <div className="row justify-content-center">
                                 <div className="col-lg-8">
+
                                     <div className="modal-body">
-                                        <h2 className="text-uppercase">{project.name}</h2>
+                                        <h2 className="text-uppercase">{modalData.name}</h2>
                                         <p className="item-intro text-muted">
-                                            <a target="_blank" href={project.live}>Click
+                                            <a target="_blank" href={modalData.live}>Click
                                                 here for the live demo</a>
                                             <span> : </span>
-                                            <a target="_blank" href={project.repo}>Click
+                                            <a target="_blank" href={modalData.repo}>Click
                                                 here for the repo</a>
                                         </p>
-                                        <img className="img-fluid d-block mx-auto" src="assets/img/portfolio/weather-dashboard.png"
+                                        <img className="img-fluid d-block mx-auto" src={modalData.image}
                                             alt="weather-dashboard-img" />
-                                        <p>{project.desc}</p>
+                                        <p>{modalData.desc}</p>
                                         <button className="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
-                                            type="button">
+                                            type="button" onClick = {() => setModalIsOpen(false)}>
                                             <i className="fas fa-xmark me-1"></i>
                                             Close
                                         </button>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            ))}
-             */}
-
-
+            </Modal>
         </div>
     )
 
