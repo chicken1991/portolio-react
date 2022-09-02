@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Nav from 'react-bootstrap/Nav'
 import brandImage from '../assets/img/benPitroff3.svg';
-import NavDropdown from 'react-bootstrap/NavDropdown'; //possibly use this for the collapsed menu
 
 function NavTabs({ currentPage, handlePageChange }) {
 
@@ -10,7 +9,6 @@ function NavTabs({ currentPage, handlePageChange }) {
 
   const handleToggle = () => {
     setNavbarOpen(prev => !prev)
-    // figure out how to close navbar once "new page" is loaded, or clicked.
   }
 
   //Scrolly navbar stuff
@@ -37,7 +35,9 @@ function NavTabs({ currentPage, handlePageChange }) {
   return (
     <Nav className={navbarClasses.join(" ")} id="mainNav">
       <div className="container">
-        <a className="navbarBrand" href="#home"><img src={brandImage} alt="img not alt - why???" /></a>
+        <a href="#home"
+                onClick={() => handlePageChange('Home')}
+                className={currentPage === 'Home' ? 'navLink active navbarBrand' : 'navLink navbarBrand'}><img src={brandImage} alt="img not alt - why???" /></a>
         <div onClick={handleToggle} className="navbarToggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-responsive"
           aria-controls="navbar-responsive" aria-expanded="false" aria-label="Toggle navigation">
           {navbarOpen ? "Close" : "Menu"}

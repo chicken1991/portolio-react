@@ -14,9 +14,7 @@ export default function Resume() {
             </div>
 
             {/* Embedded resume PDF */}
-            <object width="100%" height="800" data={PDF} type="application/pdf"/>
-
+            <object width="100%" height="800" data={PDF} type="application/pdf" />
         </div>
     )
-
 }
